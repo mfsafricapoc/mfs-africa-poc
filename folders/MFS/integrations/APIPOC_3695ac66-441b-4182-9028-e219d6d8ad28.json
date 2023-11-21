@@ -1,11 +1,11 @@
 {
-  "revision" : 417,
+  "revision" : 419,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
   "openApiUuid" : "404f5333-ab0a-499e-8563-75fb3d663df2",
-  "currentProfileUuid" : "321b74c8-f833-4409-b74f-72e1a0f7c4fa",
-  "parameterGroupUuids" : [ "65649b1a-86bc-4a66-b273-dbe70af733ed" ],
+  "currentProfileUuid" : "a36a8618-d261-4fba-938c-b1d34b444702",
+  "parameterGroupUuids" : [ "65649b1a-86bc-4a66-b273-dbe70af733ed", "d9fd1ee1-f555-4511-a56f-31ca11fd9dc6" ],
   "repoResourceUuids" : [ "9a0136ce-9e7d-4a1d-b4e2-02802dbf3d49", "a1cec1b6-1c91-44e4-a345-ee9794cbc21d", "16109e82-7a40-41ae-92bb-6f012b800c5b", "1d29ac00-9fa8-40ca-9794-e2c5b8a8c3a3", "e22cd82b-a251-43c5-9dad-cddd3a3a9e0c", "c93e64af-ba57-4c32-80f2-a28396c10da4", "db5edc6c-7085-4620-bce6-3675fcac8b93", "6a853820-fb77-47a7-ba90-a21166131293" ],
   "routeDefinitions" : [ {
     "id" : 1,
@@ -1277,10 +1277,10 @@
         "url" : "",
         "useFixedDelay" : false,
         "username" : "",
-        "webhookUrl" : "https://hooks.slack.com/services/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"
+        "webhookUrl" : "{{external.slackhook}}"
       },
       "_type" : "slack",
-      "kameletPropertiesUrl" : "?channel=msfpoc&maxResults=10&naturalOrder=false&sendEmptyMessageWhenIdle=false&bridgeErrorHandler=false&webhookUrl=https://hooks.slack.com/services/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&lazyStartProducer=false&greedy=false&initialDelay=1000&repeatCount=0&startScheduler=false&useFixedDelay=false"
+      "kameletPropertiesUrl" : "?channel=msfpoc&maxResults=10&naturalOrder=false&sendEmptyMessageWhenIdle=false&bridgeErrorHandler=false&webhookUrl={{external.slackhook}}&lazyStartProducer=false&greedy=false&initialDelay=1000&repeatCount=0&startScheduler=false&useFixedDelay=false"
     }, {
       "name" : "log",
       "nodeId" : "log-04-id",
@@ -1322,7 +1322,7 @@
   "name" : "APIPOC",
   "description" : "APIPOC",
   "createdAt" : "2023-11-15T14:59:52.448894708",
-  "updatedAt" : "2023-11-20T21:01:51.801492003",
+  "updatedAt" : "2023-11-21T22:22:11.441904903",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
-  "updatedBy" : "5e748aa0-2151-41e3-a674-c838e455be1a"
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }

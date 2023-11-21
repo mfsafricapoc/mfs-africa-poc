@@ -1,0 +1,134 @@
+{
+  "revision" : 1,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : null,
+  "currentProfileUuid" : null,
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ ],
+  "routeDefinitions" : [ {
+    "id" : null,
+    "camelRouteId" : "simple-integration",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "timer",
+      "nodeId" : "once per second-id",
+      "description" : "once per second",
+      "properties" : {
+        "daemon" : true,
+        "delay" : "1000",
+        "fixedRate" : false,
+        "period" : "1000",
+        "repeatCount" : "0",
+        "setScheduleTime" : false,
+        "time" : "2021-12-31 00:00:00",
+        "timerName" : "timer"
+      },
+      "_type" : "timer",
+      "kameletPropertiesUrl" : "?timerName=timer&daemon=true&delay=1000&fixedRate=false&period=1000&repeatCount=0&setScheduleTime=false&time=2021-12-31 00:00:00"
+    }, {
+      "name" : "setBody",
+      "nodeId" : "add exchangeId to body-id",
+      "description" : "add exchangeId to body",
+      "properties" : {
+        "expression" : "test body from simple: ${exchangeId}",
+        "language" : "Simple"
+      },
+      "_type" : "setBody",
+      "kameletPropertiesUrl" : "?language=Simple&expression=test body from simple: ${exchangeId}"
+    }, {
+      "name" : "messagingEndpoint",
+      "nodeId" : "to route-2-id",
+      "description" : "to route-2",
+      "properties" : {
+        "uri" : "direct://route-2"
+      },
+      "_type" : "messagingEndpoint",
+      "kameletPropertiesUrl" : "?uri=direct://route-2"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-2",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "direct",
+      "nodeId" : "from route-2-id",
+      "description" : "from route-2",
+      "properties" : {
+        "endpointName" : "route-2"
+      },
+      "_type" : "direct",
+      "kameletPropertiesUrl" : "?endpointName=route-2"
+    }, {
+      "name" : "setHeaders",
+      "nodeId" : "set id=${camelId}-id",
+      "description" : "set id=${camelId}",
+      "properties" : {
+        "headerList" : [ {
+          "headerName" : "id",
+          "headerValue" : "${camelId}",
+          "language" : "Simple"
+        } ]
+      },
+      "_type" : "setHeaders",
+      "kameletPropertiesUrl" : ""
+    }, {
+      "name" : "dslProcessor",
+      "nodeId" : "to route-3-id",
+      "description" : "to route-3",
+      "properties" : {
+        "dsl" : ".to('direct://route-3')"
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=.to('direct://route-3')"
+    } ]
+  }, {
+    "id" : null,
+    "camelRouteId" : "route-3",
+    "enabled" : true,
+    "routeId" : 3,
+    "route" : [ {
+      "name" : "dslProcessor",
+      "nodeId" : "from route-3-id",
+      "description" : "from route-3",
+      "properties" : {
+        "dsl" : "from('direct://route-3')"
+      },
+      "_type" : "dslProcessor",
+      "kameletPropertiesUrl" : "?dsl=from('direct://route-3')"
+    }, {
+      "name" : "process",
+      "nodeId" : "add date to headers-id",
+      "description" : "add date to headers",
+      "properties" : {
+        "code" : "exchange.getIn().setHeader(\"date\", new Date())",
+        "import" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?code=exchange.getIn().setHeader(\"date\", new Date())"
+    }, {
+      "name" : "log",
+      "nodeId" : "EIP log-id",
+      "description" : "EIP log",
+      "properties" : {
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}"
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&message=headers: ${headers}; body: ${body}"
+    } ]
+  } ],
+  "traits" : [ ],
+  "id" : "47336c85-37f7-4f1c-aca0-28a4eb5094f0",
+  "name" : "simple-integration-67a5da70",
+  "description" : "Simple integration with the timer-body-log example",
+  "createdAt" : "2023-11-21T17:47:47.081335687",
+  "updatedAt" : "2023-11-21T17:47:47.081336277",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}
