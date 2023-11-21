@@ -1,5 +1,5 @@
 {
-  "revision" : 419,
+  "revision" : 420,
   "compression" : false,
   "dataAnalyzer" : true,
   "replicas" : 1,
@@ -1083,7 +1083,7 @@
           "description" : "",
           "properties" : {
             "_type" : "slack",
-            "active" : true,
+            "active" : false,
             "advancedParameters" : [ {
               "name" : "",
               "uuid" : "d4fe102b-1302-41de-a820-0f40e07fe97e",
@@ -1322,7 +1322,7 @@
   "name" : "APIPOC",
   "description" : "APIPOC",
   "createdAt" : "2023-11-15T14:59:52.448894708",
-  "updatedAt" : "2023-11-21T22:22:11.441904903",
+  "updatedAt" : "2023-11-21T22:36:54.258369165",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }

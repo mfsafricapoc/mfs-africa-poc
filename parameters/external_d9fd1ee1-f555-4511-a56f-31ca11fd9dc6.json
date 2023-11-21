@@ -5,14 +5,14 @@
     "profileValues" : [ {
       "profileUuid" : "a36a8618-d261-4fba-938c-b1d34b444702",
       "profileName" : "Default",
-      "parameterValue" : "https://hooks.slack.com/services/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"
+      "parameterValue" : "https://hooks.slack.com/services/token"
     } ]
   } ],
   "id" : "d9fd1ee1-f555-4511-a56f-31ca11fd9dc6",
   "name" : "external",
   "description" : "External Parameters",
   "createdAt" : "2023-11-21T22:21:22.214378062",
-  "updatedAt" : "2023-11-21T22:21:37.816984851",
+  "updatedAt" : "2023-11-21T22:23:34.372040875",
   "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
   "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
 }
