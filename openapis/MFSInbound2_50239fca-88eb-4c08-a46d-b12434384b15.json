@@ -1,0 +1,50 @@
+{
+  "version" : "1.0.0",
+  "host" : "inbound.devbeta.jetic.io",
+  "id" : "50239fca-88eb-4c08-a46d-b12434384b15",
+  "name" : "MFSInbound2",
+  "description" : null,
+  "createdAt" : "2023-11-15T15:50:45.532328098",
+  "updatedAt" : "2023-11-15T15:54:32.014575468",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "e280aba7-4c4a-4344-9e13-c35215c4e6e7",
+    "name" : "Status",
+    "path" : "/status",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "dba74ab1-6f07-4e40-ae56-ec92089785d9",
+      "operationId" : "inquiry",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "26e06718-0441-4fa8-8037-e0b6905716c7",
+    "name" : "Transaction",
+    "path" : "/transaction",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "dadf85c6-00f3-439e-a80b-336f5df2a873",
+      "operationId" : "start",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "3b13282b-fcce-424a-b114-0cf41e2f4f8b",
+    "name" : "User",
+    "path" : "/user",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "5d0a9c69-a094-4fbf-985a-a1ebbeb98d94",
+      "operationId" : "get",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"MFSInbound\",\"version\":\"1.0.0\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/status\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"inquiry\"}},\"/transaction\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"start\"}},\"/user\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"get\"}}},\"components\":{}}"
+}

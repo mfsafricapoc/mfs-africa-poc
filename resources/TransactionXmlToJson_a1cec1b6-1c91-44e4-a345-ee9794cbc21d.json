@@ -1,0 +1,14 @@
+{
+  "type" : "MAPPING",
+  "properties" : {
+    "filename" : "transactionxmltojson.adm",
+    "mappingId" : "1232778048"
+  },
+  "id" : "a1cec1b6-1c91-44e4-a345-ee9794cbc21d",
+  "name" : "TransactionXmlToJson",
+  "description" : "Transaction Response Xml To Json",
+  "createdAt" : "2023-11-16T18:16:46.925953876",
+  "updatedAt" : "2023-11-16T18:17:20.463891555",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

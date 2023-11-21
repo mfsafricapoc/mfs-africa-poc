@@ -1,0 +1,221 @@
+{
+  "revision" : 62,
+  "compression" : false,
+  "dataAnalyzer" : true,
+  "replicas" : 1,
+  "openApiUuid" : "845f4e4f-bb95-4227-a5d3-dcbecc4c250b",
+  "currentProfileUuid" : "321b74c8-f833-4409-b74f-72e1a0f7c4fa",
+  "parameterGroupUuids" : [ ],
+  "repoResourceUuids" : [ "0a1ea3ef-bf51-4ba9-84b4-1b8310696b49" ],
+  "routeDefinitions" : [ {
+    "id" : 1,
+    "camelRouteId" : "financialInquiry",
+    "enabled" : true,
+    "routeId" : 1,
+    "route" : [ {
+      "name" : "postRequest",
+      "nodeId" : "financial Inquiry-id",
+      "description" : "financial Inquiry",
+      "properties" : {
+        "_type" : "restApi",
+        "active" : true,
+        "camelGroup" : "rest",
+        "consumes" : "application/xml",
+        "endpoint" : "/financial",
+        "method" : "post",
+        "name" : "postRequest",
+        "operationName" : "info",
+        "produces" : "application/xml",
+        "requestmethod" : "POST",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?endpoint=/financial&operationName=info&requestmethod=POST&consumes=application/xml&produces=application/xml&method=post"
+    }, {
+      "name" : "unmarshal",
+      "nodeId" : "unmarshal-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "unmarshal",
+        "active" : true,
+        "camelGroup" : "transform",
+        "dataFormatExpression" : "",
+        "dataFormatGroovyDsl" : ".jacksonXml()",
+        "name" : "unmarshal",
+        "url" : ""
+      },
+      "_type" : "unmarshal",
+      "kameletPropertiesUrl" : "?dataFormatGroovyDsl=.jacksonXml()"
+    }, {
+      "name" : "process",
+      "nodeId" : "process-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "process",
+        "active" : true,
+        "camelGroup" : "transform",
+        "code" : "HashMap<String, Object> xmlMap = exchange.getIn().getBody(HashMap.class);\n\nif (xmlMap != null) {\n    HashMap<String, String> extension = xmlMap.get(\"extension\") as HashMap<String, String>\n    Float amount = extension?.get(\"srcAmount\")?.toFloat() ?: 0.0\n\n   // Check if srcAmount is odd\n    if (amount % 2 != 0) {\n        xmlMap.put(\"approval\", false);\n        xmlMap.put(\"availAmount\", amount / 2);\n    } else {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", amount * 1.5);\n    }\n}\n\nexchange.getIn().setBody(xmlMap);",
+        "import" : "// import org.apache.camel.Message\nimport java.util.HashMap;",
+        "name" : "process",
+        "url" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?import=// import org.apache.camel.Message\nimport java.util.HashMap;&code=HashMap<String, Object> xmlMap = exchange.getIn().getBody(HashMap.class);\n\nif (xmlMap != null) {\n    HashMap<String, String> extension = xmlMap.get(\"extension\") as HashMap<String, String>\n    Float amount = extension?.get(\"srcAmount\")?.toFloat() ?: 0.0\n\n   // Check if srcAmount is odd\n    if (amount % 2 != 0) {\n        xmlMap.put(\"approval\", false);\n        xmlMap.put(\"availAmount\", amount / 2);\n    } else {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", amount * 1.5);\n    }\n}\n\nexchange.getIn().setBody(xmlMap);"
+    }, {
+      "name" : "marshal",
+      "nodeId" : "marshal-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "marshal",
+        "active" : true,
+        "camelGroup" : "transform",
+        "dataFormatExpression" : "",
+        "dataFormatGroovyDsl" : ".jacksonXml()",
+        "name" : "marshal",
+        "url" : ""
+      },
+      "_type" : "marshal",
+      "kameletPropertiesUrl" : "?dataFormatGroovyDsl=.jacksonXml()"
+    }, {
+      "name" : "log",
+      "nodeId" : "log-00-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
+    } ]
+  }, {
+    "id" : 2,
+    "camelRouteId" : "startTransaction",
+    "enabled" : true,
+    "routeId" : 2,
+    "route" : [ {
+      "name" : "postRequest",
+      "nodeId" : "Start Transaction-id",
+      "description" : "Start Transaction",
+      "properties" : {
+        "_type" : "restApi",
+        "active" : true,
+        "camelGroup" : "rest",
+        "consumes" : "application/xml",
+        "endpoint" : "/transaction",
+        "method" : "post",
+        "name" : "postRequest",
+        "operationName" : "start",
+        "produces" : "application/xml",
+        "requestmethod" : "POST",
+        "url" : ""
+      },
+      "_type" : "restApi",
+      "kameletPropertiesUrl" : "?endpoint=/transaction&operationName=start&requestmethod=POST&consumes=application/xml&produces=application/xml&method=post"
+    }, {
+      "name" : "unmarshal",
+      "nodeId" : "unmarshal-01-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "unmarshal",
+        "active" : true,
+        "camelGroup" : "transform",
+        "dataFormatExpression" : "",
+        "dataFormatGroovyDsl" : ".jacksonXml()",
+        "name" : "unmarshal",
+        "url" : ""
+      },
+      "_type" : "unmarshal",
+      "kameletPropertiesUrl" : "?dataFormatGroovyDsl=.jacksonXml()"
+    }, {
+      "name" : "process",
+      "nodeId" : "process-01-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "process",
+        "active" : true,
+        "camelGroup" : "transform",
+        "code" : "HashMap<String, Object> xmlMap = exchange.getIn().getBody(HashMap.class);\n\nif (xmlMap != null) {\n    HashMap<String, String> extension = xmlMap.get(\"amount\") as HashMap<String, String>\n    Float amount = extension?.get(\"amount\")?.toFloat() ?: 0.0\n\n   // Check if srcAmount is odd\n    if (amount % 2 != 0) {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", (amount / 2 )* -1);\n    } else {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", amount * 1.5);\n    }\n}\n\nexchange.getIn().setBody(xmlMap);",
+        "import" : "// import org.apache.camel.Message\nimport java.util.HashMap;",
+        "name" : "process",
+        "url" : ""
+      },
+      "_type" : "process",
+      "kameletPropertiesUrl" : "?import=// import org.apache.camel.Message\nimport java.util.HashMap;&code=HashMap<String, Object> xmlMap = exchange.getIn().getBody(HashMap.class);\n\nif (xmlMap != null) {\n    HashMap<String, String> extension = xmlMap.get(\"amount\") as HashMap<String, String>\n    Float amount = extension?.get(\"amount\")?.toFloat() ?: 0.0\n\n   // Check if srcAmount is odd\n    if (amount % 2 != 0) {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", (amount / 2 )* -1);\n    } else {\n        xmlMap.put(\"approval\", true);\n        xmlMap.put(\"availAmount\", amount * 1.5);\n    }\n}\n\nexchange.getIn().setBody(xmlMap);"
+    }, {
+      "name" : "marshal",
+      "nodeId" : "marshal-01-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "marshal",
+        "active" : true,
+        "camelGroup" : "transform",
+        "dataFormatExpression" : "",
+        "dataFormatGroovyDsl" : ".jacksonXml()",
+        "name" : "marshal",
+        "url" : ""
+      },
+      "_type" : "marshal",
+      "kameletPropertiesUrl" : "?dataFormatGroovyDsl=.jacksonXml()"
+    }, {
+      "name" : "log",
+      "nodeId" : "log-01-id",
+      "description" : "",
+      "properties" : {
+        "_type" : "log",
+        "active" : true,
+        "advancedParameters" : [ ],
+        "camelGroup" : "component",
+        "level" : "INFO",
+        "logType" : "EIP",
+        "loggerName" : "log",
+        "message" : "headers: ${headers}; body: ${body}",
+        "multiline" : false,
+        "name" : "log",
+        "showAll" : false,
+        "showBody" : true,
+        "showBodyType" : true,
+        "showCaughtException" : false,
+        "showExchangeId" : false,
+        "showHeaders" : false,
+        "showProperties" : false,
+        "showStackTrace" : false,
+        "toDynamicEndpoint" : false,
+        "url" : ""
+      },
+      "_type" : "log",
+      "kameletPropertiesUrl" : "?loggerName=log&level=INFO&logType=EIP&multiline=false&showAll=false&showBody=true&showBodyType=true&showCaughtException=false&showExchangeId=false&showHeaders=false&showProperties=false&showStackTrace=false&message=headers: ${headers}; body: ${body}"
+    } ]
+  } ],
+  "traits" : [ {
+    "name" : "ingress",
+    "configuration" : {
+      "enabled" : true,
+      "host" : "outbound.devbeta.jetic.io"
+    }
+  } ],
+  "id" : "c38a0ef9-4d10-486a-967b-c713f2bb6925",
+  "name" : "APIMock",
+  "description" : "",
+  "createdAt" : "2023-11-15T15:13:20.434694712",
+  "updatedAt" : "2023-11-17T16:21:13.868889977",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "5e748aa0-2151-41e3-a674-c838e455be1a"
+}

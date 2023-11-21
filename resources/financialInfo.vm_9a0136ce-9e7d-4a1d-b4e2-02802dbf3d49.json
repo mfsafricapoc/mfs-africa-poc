@@ -1,0 +1,17 @@
+{
+  "type" : "RESOURCE_FILE",
+  "properties" : {
+    "compression" : "false",
+    "content" : "Hello from text.txt",
+    "file" : "data:application/octet-stream;base64,I3NldCgkbnMyID0gImh0dHA6Ly93d3cuZXJpY3Nzb24uY29tL2VtL2VtbS9zZXJ2aWNlcHJvdmlkZXIvdjFfMC9iYWNrZW5kL2NsaWVudCIpCgo8bnMyOmdldGZpbmFuY2lhbHJlc291cmNlaW5mb3JtYXRpb25yZXF1ZXN0IHhtbG5zOm5zMj0iJG5zMiI+CiAgICA8cmVzb3VyY2U+ZnJpOiR7ZXhjaGFuZ2UucHJvcGVydGllcy5yZXNvdXJjZX1AbWZzYS5vdXQvU1A8L3Jlc291cmNlPgogICAgPGFjY291bnRob2xkZXJpZD5JRDoke2V4Y2hhbmdlLnByb3BlcnRpZXMuYWNjb3VudGhvbGRlcmlkfS9NU0lTRE48L2FjY291bnRob2xkZXJpZD4KICAgIDxleHRlbnNpb24+CiAgICAgICAgPGRlc3RDb3VudHJ5PiR7ZXhjaGFuZ2UucHJvcGVydGllcy5kZXN0Q291bnRyeX08L2Rlc3RDb3VudHJ5PgogICAgICAgIDxyZXF1ZXN0VHlwZT4ke2V4Y2hhbmdlLnByb3BlcnRpZXMucmVxdWVzdFR5cGV9PC9yZXF1ZXN0VHlwZT4KICAgICAgICA8c3JjQW1vdW50PiR7ZXhjaGFuZ2UucHJvcGVydGllcy5zcmNBbW91bnR9PC9zcmNBbW91bnQ+CiAgICAgICAgPHNyY0N1cnJlbmN5PiR7ZXhjaGFuZ2UucHJvcGVydGllcy5zcmNDdXJyZW5jeX08L3NyY0N1cnJlbmN5PgogICAgPC9leHRlbnNpb24+CjwvbnMyOmdldGZpbmFuY2lhbHJlc291cmNlaW5mb3JtYXRpb25yZXF1ZXN0Pgo=",
+    "filename" : "financialInfo.vm",
+    "type" : "File"
+  },
+  "id" : "9a0136ce-9e7d-4a1d-b4e2-02802dbf3d49",
+  "name" : "financialInfo.vm",
+  "description" : "financialInfo.vm",
+  "createdAt" : "2023-11-15T16:20:31.711198958",
+  "updatedAt" : "2023-11-16T01:49:46.44744386",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

@@ -1,0 +1,89 @@
+{
+  "type" : "ParameterGroup",
+  "parameters" : [ {
+    "parameterName" : "starturl",
+    "profileValues" : [ {
+      "profileUuid" : "321b74c8-f833-4409-b74f-72e1a0f7c4fa",
+      "profileName" : "Default",
+      "parameterValue" : "outbound.devbeta.jetic.io/transaction"
+    }, {
+      "profileUuid" : "a36a8618-d261-4fba-938c-b1d34b444702",
+      "profileName" : "Default",
+      "parameterValue" : "outbound.devbeta.jetic.io/transaction"
+    }, {
+      "profileUuid" : "b76bcf76-32b4-46cc-a8df-e135506945e9",
+      "profileName" : "dev",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "4c2463b5-8b2c-483a-b7b1-a5a45776a6af",
+      "profileName" : "development",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "0f3e1e23-817b-4c4a-93b2-fb210cc4b410",
+      "profileName" : "mitsui-dev",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "00b419dd-8afe-4cb0-9a78-a572d7cf9ff3",
+      "profileName" : "mitsui-staging",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "ab6a14e3-0bd0-494c-bf38-b7349a85369f",
+      "profileName" : "mitsui-test",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "6b83adbf-53bd-4287-bc80-6bbbcf0b4e09",
+      "profileName" : "new-profile",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "5964b4ec-4b6a-4276-a7ba-7b9aa7ff800b",
+      "profileName" : "staging",
+      "parameterValue" : ""
+    } ]
+  }, {
+    "parameterName" : "userUrl",
+    "profileValues" : [ {
+      "profileUuid" : "321b74c8-f833-4409-b74f-72e1a0f7c4fa",
+      "profileName" : "Default",
+      "parameterValue" : "outbound.devbeta.jetic.io/financial"
+    }, {
+      "profileUuid" : "a36a8618-d261-4fba-938c-b1d34b444702",
+      "profileName" : "Default",
+      "parameterValue" : "outbound.devbeta.jetic.io/financial"
+    }, {
+      "profileUuid" : "b76bcf76-32b4-46cc-a8df-e135506945e9",
+      "profileName" : "dev",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "4c2463b5-8b2c-483a-b7b1-a5a45776a6af",
+      "profileName" : "development",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "0f3e1e23-817b-4c4a-93b2-fb210cc4b410",
+      "profileName" : "mitsui-dev",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "00b419dd-8afe-4cb0-9a78-a572d7cf9ff3",
+      "profileName" : "mitsui-staging",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "ab6a14e3-0bd0-494c-bf38-b7349a85369f",
+      "profileName" : "mitsui-test",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "6b83adbf-53bd-4287-bc80-6bbbcf0b4e09",
+      "profileName" : "new-profile",
+      "parameterValue" : ""
+    }, {
+      "profileUuid" : "5964b4ec-4b6a-4276-a7ba-7b9aa7ff800b",
+      "profileName" : "staging",
+      "parameterValue" : ""
+    } ]
+  } ],
+  "id" : "65649b1a-86bc-4a66-b273-dbe70af733ed",
+  "name" : "mockedenv",
+  "description" : "mockedenv",
+  "createdAt" : "2023-11-15T16:54:14.438059213",
+  "updatedAt" : "2023-11-17T14:01:33.3977347",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "5e748aa0-2151-41e3-a674-c838e455be1a"
+}

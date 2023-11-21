@@ -1,0 +1,50 @@
+{
+  "version" : "1.0.1",
+  "host" : "inbound.devbeta.jetic.io",
+  "id" : "404f5333-ab0a-499e-8563-75fb3d663df2",
+  "name" : "MSFInbound",
+  "description" : null,
+  "createdAt" : "2023-11-15T15:55:13.96271699",
+  "updatedAt" : "2023-11-15T16:09:30.958678147",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "00dbdbc2-1739-4765-a691-c83aa694fced",
+    "name" : "Transactions",
+    "path" : "/transactions",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "39a83706-4e1b-4ee4-94d7-0246b33727fe",
+      "operationId" : "start",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "a6d4ff04-3081-4810-86fe-6cf25265cf3a",
+    "name" : "Status",
+    "path" : "/status/{transactionId}",
+    "pathVariables" : [ "transactionId" ],
+    "operations" : [ {
+      "uuid" : "bf25f37f-aeb9-421d-9ae1-2d43646b697d",
+      "operationId" : "statusInquiry",
+      "method" : "get",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  }, {
+    "uuid" : "5744fcc0-f153-4285-9f26-014f8d5c0913",
+    "name" : "Users",
+    "path" : "/users",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "b0ab6cdc-aba6-4e23-a969-d5aeb44c194c",
+      "operationId" : "userInquiry",
+      "method" : "post",
+      "consumes" : "application/json",
+      "produces" : "application/json"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"MSFInbound\",\"version\":\"1.0.1\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/transactions\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"start\"}},\"/status/{transactionId}\":{\"get\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"statusInquiry\"},\"parameters\":[{\"name\":\"transactionId\",\"description\":\"default path variable description\",\"schema\":{\"type\":\"string\"},\"in\":\"path\",\"required\":true}]},\"/users\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"userInquiry\"}}},\"components\":{}}"
+}

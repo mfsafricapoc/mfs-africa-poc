@@ -1,0 +1,17 @@
+{
+  "type" : "RESOURCE_FILE",
+  "properties" : {
+    "compression" : "false",
+    "content" : "import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty; import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;  import java.util.HashMap;  @JacksonXmlRootElement(localName = \"HashMap\") public class GetFinancialResourceInformationResponse {      private Extension extension;     private String resource;     private Boolean approval;     private Float availAmount;     private String accountholderid;      @JacksonXmlProperty(localName = \"extension\")     public Extension getExtension() {         return extension;     }      public void setExtension(Extension extension) {         this.extension = extension;     }      @JacksonXmlProperty(localName = \"resource\")     public String getResource() {         return resource;     }      public void setResource(String resource) {         this.resource = resource;     }      @JacksonXmlProperty(localName = \"approval\")     public Boolean getApproval() {         return approval;     }      public void setApproval(Boolean approval) {         this.approval = approval;     }      @JacksonXmlProperty(localName = \"availAmount\")     public Float getAvailAmount() {         return availAmount;     }      public void setAvailAmount(Float availAmount) {         this.availAmount = availAmount;     }      @JacksonXmlProperty(localName = \"accountholderid\")     public String getAccountholderid() {         return accountholderid;     }      public void setAccountholderid(String accountholderid) {         this.accountholderid = accountholderid;     }      public static class Extension {         private String destCountry;         private String requestType;         private Float srcAmount;         private String srcCurrency;          @JacksonXmlProperty(localName = \"destCountry\")         public String getDestCountry() {             return destCountry;         }          public void setDestCountry(String destCountry) {             this.destCountry = destCountry;         }          @JacksonXmlProperty(localName = \"requestType\")         public String getRequestType() {             return requestType;         }          public void setRequestType(String requestType) {             this.requestType = requestType;         }          @JacksonXmlProperty(localName = \"srcAmount\")         public Float getSrcAmount() {             return srcAmount;         }          public void setSrcAmount(Float srcAmount) {             this.srcAmount = srcAmount;         }          @JacksonXmlProperty(localName = \"srcCurrency\")         public String getSrcCurrency() {             return srcCurrency;         }          public void setSrcCurrency(String srcCurrency) {             this.srcCurrency = srcCurrency;         }     } }",
+    "file" : null,
+    "filename" : "GetFinancialResourceInformationResponse.java",
+    "type" : "Content"
+  },
+  "id" : "82e94d01-980d-49f6-9a53-a8535615753d",
+  "name" : "GetFinancialResp",
+  "description" : "GetFinancialResp",
+  "createdAt" : "2023-11-16T04:04:11.935004554",
+  "updatedAt" : "2023-11-16T04:04:59.288728252",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

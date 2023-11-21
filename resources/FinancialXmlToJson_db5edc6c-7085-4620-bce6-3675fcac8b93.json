@@ -1,0 +1,14 @@
+{
+  "type" : "MAPPING",
+  "properties" : {
+    "filename" : "financialxmltojson.adm",
+    "mappingId" : "1155185576"
+  },
+  "id" : "db5edc6c-7085-4620-bce6-3675fcac8b93",
+  "name" : "FinancialXmlToJson",
+  "description" : "Financial Response Xml To Json",
+  "createdAt" : "2023-11-16T18:16:02.80050159",
+  "updatedAt" : "2023-11-16T18:16:19.778540473",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

@@ -1,0 +1,13 @@
+{
+  "type" : "MAVEN_DEPENDENCY",
+  "properties" : {
+    "maven" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.0"
+  },
+  "id" : "c93e64af-ba57-4c32-80f2-a28396c10da4",
+  "name" : "camel-jacksondate",
+  "description" : "camel-jacksondate",
+  "createdAt" : "2023-11-16T21:11:51.159120403",
+  "updatedAt" : "2023-11-16T21:16:13.20256002",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

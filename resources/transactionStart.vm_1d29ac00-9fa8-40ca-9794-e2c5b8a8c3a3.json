@@ -1,0 +1,17 @@
+{
+  "type" : "RESOURCE_FILE",
+  "properties" : {
+    "compression" : "false",
+    "content" : "Hello from text.txt",
+    "file" : "data:application/octet-stream;base64,I3NldCgkbnMwID0gImh0dHA6Ly93d3cuZXJpY3Nzb24uY29tL2VtL2VtbS9zZXJ2aWNlcHJvdmlkZXIvdjFfMC9iYWNrZW5kL2NsaWVudCIpCgo8bnMwOnBheW1lbnRyZXF1ZXN0IHhtbG5zOm5zMD0iJG5zMCI+CiAgICA8dHJhbnNhY3Rpb25pZD4ke2V4Y2hhbmdlLnByb3BlcnRpZXMudHJhbnNhY3Rpb25JZH08L3RyYW5zYWN0aW9uaWQ+CiAgICA8YWNjb3VudGhvbGRlcmlkPiR7ZXhjaGFuZ2UucHJvcGVydGllcy5hY2NvdW50aG9sZGVyaWR9PC9hY2NvdW50aG9sZGVyaWQ+CiAgICA8cmVjZWl2aW5nZnJpPiR7ZXhjaGFuZ2UucHJvcGVydGllcy5yZWNlaXZpbmdGcml9PC9yZWNlaXZpbmdmcmk+CiAgICA8YW1vdW50PgogICAgICAgIDxhbW91bnQ+JHtleGNoYW5nZS5wcm9wZXJ0aWVzLmFtb3VudH08L2Ftb3VudD4KICAgICAgICA8Y3VycmVuY3k+JHtleGNoYW5nZS5wcm9wZXJ0aWVzLmN1cnJlbmN5fTwvY3VycmVuY3k+CiAgICA8L2Ftb3VudD4KICAgIDxtZXNzYWdlPiR7ZXhjaGFuZ2UucHJvcGVydGllcy5tZXNzYWdlfTwvbWVzc2FnZT4KPC9uczA6cGF5bWVudHJlcXVlc3Q+Cg==",
+    "filename" : "transactionStart.vm",
+    "type" : "File"
+  },
+  "id" : "1d29ac00-9fa8-40ca-9794-e2c5b8a8c3a3",
+  "name" : "transactionStart.vm",
+  "description" : "transactionStart.vm",
+  "createdAt" : "2023-11-15T16:21:07.036501038",
+  "updatedAt" : "2023-11-16T01:50:33.843890029",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011"
+}

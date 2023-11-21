@@ -1,0 +1,38 @@
+{
+  "version" : "1.0.0",
+  "host" : "outbound.devbeta.jetic.io",
+  "id" : "845f4e4f-bb95-4227-a5d3-dcbecc4c250b",
+  "name" : "MFSOutboundMock",
+  "description" : null,
+  "createdAt" : "2023-11-15T15:16:12.230917803",
+  "updatedAt" : "2023-11-15T15:20:18.68975928",
+  "createdBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "updatedBy" : "123e4567-e89b-12d3-a456-426655440011",
+  "endpoints" : [ {
+    "uuid" : "b095dd30-3781-4d86-b676-14e502848973",
+    "name" : "Financial",
+    "path" : "/financial",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "68941d9a-3d3a-4e8e-8fd4-8d90461b08a6",
+      "operationId" : "info",
+      "method" : "post",
+      "consumes" : "application/xml",
+      "produces" : "application/xml"
+    } ]
+  }, {
+    "uuid" : "5f265140-c7a8-403d-897f-ce4d865f5538",
+    "name" : "Transaction",
+    "path" : "/transaction",
+    "pathVariables" : [ ],
+    "operations" : [ {
+      "uuid" : "2ab064cc-c0d7-410c-960f-4fa7c7369994",
+      "operationId" : "start",
+      "method" : "post",
+      "consumes" : "application/xml",
+      "produces" : "application/xml"
+    } ]
+  } ],
+  "imported" : false,
+  "specification" : "{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"MFSOutboundMock\",\"version\":\"1.0.0\"},\"servers\":[{\"url\":\"/\"}],\"paths\":{\"/financial\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/xml\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"info\"}},\"/transaction\":{\"post\":{\"responses\":{\"200\":{\"content\":{\"application/xml\":{\"schema\":{\"type\":\"string\"}}},\"description\":\"default response description\"}},\"operationId\":\"start\"}}},\"components\":{}}"
+}
